@@ -1,7 +1,7 @@
-const delayReturnTrue = require("./delayReturnTrue")
+const standardPromiseWithDelay = require("./standardPromiseWithDelay")
 
 module.exports = async () => {
-    if(await delayReturnTrue() === "stuff"){
+    if(await standardPromiseWithDelay.get() === "stuff"){
         return true
     }else{
         return false
