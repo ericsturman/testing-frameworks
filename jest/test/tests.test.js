@@ -14,6 +14,6 @@ describe("assorted tests", () => {
     it("testing mocking out a module with a spy", async () => {
         const mockDelayReturn = jest.spyOn(delayReturnTrue, "get")
         mockDelayReturn.mockImplementationOnce(() => "things")
-        expect(await someModule.getPromise()).toEqual("t")
+        expect(await someModule.getFirstCharacter()).toEqual("t")
     })
 })  
