@@ -9,8 +9,8 @@ describe("mockingCallbacks", () => {
     afterEach(() => jest.clearAllMocks())
     test("main", () => {
         const rootLevelFuncMock = jest.spyOn(rootLevelFunc, "mainFunc")
-        rootLevelFuncMock.mockImplementation(() => {
-            return "bogus"
+        rootLevelFuncMock.mockImplementation((fun) => {
+            return fun((x) => x[0])
         })
         const result = main("things")
         console.info(">>>>>", result)
